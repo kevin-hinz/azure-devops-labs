@@ -44,7 +44,7 @@ In this lab, you will learn how to integrate Azure DevOps Services with SonarClo
 
    ![Create project](images/azure-create-project.png)
 
-   Import the **Sonar Scanning Examples repository** from GitHub at https://github.com/SonarSource/sonar-scanning-examples.git or use the HTTPS address of your own repo. The scanning examples repository contains sample projects for a number of build systems and languages including C# with MSBuild, and Maven and Gradle with Java.
+   Import the **Sonar Scanning Examples repository** from GitHub at https://github.com/SonarSource/sonar-scanning-examples.git or use the HTTPS address of your own repo. The scanning examples repository contains sample projects for a number of build systems and languages including C# with MSBuild, Maven, and Gradle with Java.
    
    Go to **Your project** > **Repos**:
 
@@ -130,7 +130,7 @@ In your new Azure DevOps project, go to the **Pipelines** > **Pipelines** tab an
 
    ![Create pipeline](images/1/azure-create-pipeline.png)
 
-Here you have the two options: you can configure the pipeline with either the **YAML** editor or choose to use the **Classic editor** to create a pipeline without YAML.
+Here you have two options: you can configure the pipeline with either the **YAML** editor or choose to use the **Classic editor** to create a pipeline without YAML.
 
 With the classic editor, you can take advantage of the pre-defined templates that were installed as part of the SonarCloud Extension above. With the YAML editor, you can use a separately provided YAML template file. We will cover both methods in this exercise, starting with the **YAML** editor.
 
@@ -216,7 +216,7 @@ To continue with this alternate part of **Exercise 1**, you should have already 
 
 1. Next, we must add the analysis configuration values given by the SonarCloud in-product tutorial to the **Prepare analysis on SonarCloud** step in the pipeline.
    
-   1. If you haven't already defined your **SonarCloud Service Endpoint**, do it now; it was the last step we took in SonarCloud before starting Exercise 1. To create a new service endpoint, click the **New** button then add your **SonarCloud Token** and **Verify** the connection. If verification works, give your token a name then select **Verify and save** to define it in the task.
+   1. If you haven't already defined your **SonarCloud Service Endpoint**, do it now; it was the last step we took in SonarCloud before starting [Exercise 1](#exercise-1-set-up-a-pipeline-that-integrates-with-sonarcloud). To create a new service endpoint, click the **New** button then add your **SonarCloud Token** and **Verify** the connection. If verification works, give your token a name then select **Verify and save** to define it in the task.
 
       ![Create new Service Endpoint](images/1/azure-classic-create-endpoint.png) 
 
@@ -240,7 +240,7 @@ To continue with this alternate part of **Exercise 1**, you should have already 
 
 1. [Optional] Enable the **Publish Quality Gate Result** step in your pipeline.
 
-   This step is added by default via the **.NET Desktop with SonarCloud** template, and is recommended to use SonarSource's Clean As You Code best practices. Enabling this feature will delay the completion of the build until the processing on SonarCloud has finished. However, it can be removed if desired.
+   This step is added by default via the **.NET Desktop with SonarCloud** template, and is recommended to use SonarSource's Clean as You Code best practices. Enabling this feature will delay the completion of the build until the processing on SonarCloud has finished. However, it can be removed if desired.
 
    ![Publish your Quality Gate](images/1/azure-classic-publish-quality-gate.png)
 
